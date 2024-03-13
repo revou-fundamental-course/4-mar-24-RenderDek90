@@ -7,6 +7,8 @@ var age = document.getElementById('age');
 const formButton = document.getElementById('calculate_button');
 
 var counter = 0;
+
+// Update Button to disable Clicked
 function updateButtonState() {
   if (counter === 3) {
     formButton.removeAttribute('disabled');
@@ -18,8 +20,13 @@ function updateButtonState() {
 }
 
 var errorDiv = document.getElementsByClassName('error-div');
+
 // Ready Document
 document.addEventListener('DOMContentLoaded', function () {
+  var x = 10;
+  var y = 20;
+  console.log(x + y);
+
   updateButtonState();
   console.log(errorDiv);
   // Check Input Value Is Empty Or Not
@@ -78,6 +85,7 @@ function resetAllBMI() {
   return;
 }
 
+// Calculation for BMI
 function calculationBMI(weight, height) {
   var bmi = weight / (height * height);
   var bmi_floor = Math.floor(bmi);
@@ -86,6 +94,7 @@ function calculationBMI(weight, height) {
   return [bmi, bmi_floor, bmi_round];
 }
 
+// Return Category of BMI
 function categoryBMI(bmi) {
   var categories = ['Kurang', 'Normal', 'Lebih', 'Obesitas'];
 
@@ -108,6 +117,7 @@ function categoryBMI(bmi) {
   return 'Tidak tercatat dalam BMI :)';
 }
 
+// Return Display in HTML
 function calculateBMI() {
   console.log('Calculate BMI...');
   weight = parseFloat(weight.value);
