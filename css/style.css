@@ -1,0 +1,313 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 3rem;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.main-header {
+  padding: 2rem 0px;
+}
+
+/* Error Form */
+.error-message {
+  color: red;
+}
+
+.error-div {
+  display: none;
+}
+
+/* Form */
+.container-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.gender {
+  font-weight: bold;
+}
+
+.container-calculator {
+  padding: 2rem;
+  background-color: #f2f3f5;
+}
+
+.gender-container > label,
+.weight-container > label,
+.age-container > label,
+.height-container > label {
+  font-weight: bold;
+}
+
+.pencil-img {
+  height: 1em;
+  width: auto;
+  background-color: #eeeeee;
+  padding: 0.5rem;
+  position: absolute;
+  border: 0.5px solid black;
+}
+
+/* Form */
+.container-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.gender {
+  font-weight: bold;
+}
+
+.container-calculator {
+  padding: 2rem;
+  background-color: #f2f3f5;
+}
+
+.gender-container > label,
+.weight-container > label,
+.age-container > label,
+.height-container > label {
+  font-weight: bold;
+}
+
+.pencil-img {
+  height: 1em;
+  width: auto;
+  background-color: #eeeeee;
+  padding: 0.5rem;
+  position: absolute;
+  border: 0.5px solid black;
+}
+
+.text-form {
+  position: relative;
+  padding: 1rem 0rem;
+}
+
+.text-form > input {
+  width: calc(100% - 2.5rem);
+  height: 2rem;
+  padding-left: 2.5rem;
+  border-radius: 5px;
+  outline: 0.5px;
+}
+
+.section-container {
+  width: 100%;
+}
+
+#calculate_button {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  border: 0;
+  /* background-color: #5cc0de; */
+  cursor: pointer;
+}
+
+.button {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  border: 0;
+  background-color: #5cc0de;
+  cursor: pointer;
+}
+
+#reset_button {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 0;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  cursor: pointer;
+}
+
+.buttons-form {
+  margin-top: 2rem;
+}
+
+/* Feature */
+.feature-desc-container {
+  padding: 2rem 0px;
+}
+
+.title-feature {
+  font-size: 1.5rem;
+}
+
+ol {
+  padding: 0.5rem;
+}
+
+.paragraph-desc {
+  padding: 1rem 0;
+}
+
+/* BMI Result */
+
+.bmi-result-container {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f2f3f5;
+}
+
+#bmi-category,
+.med-container > p {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+#bmi-result {
+  font-size: 2.3rem;
+}
+
+#bmi-message-res {
+  padding: 2rem 0px;
+}
+
+.bmi-desc-container {
+  padding: 2rem 0px;
+}
+
+.bmi-desc-container > p:nth-child(1) {
+  line-height: normal;
+  padding-bottom: 0.5rem;
+}
+
+.bmi-buttons {
+  padding: 1rem 0px;
+}
+
+/* Medical Container */
+.med-container {
+  background-color: #f2f3f5;
+}
+
+.med-container > ul {
+  list-style: none;
+  opacity: 50%;
+  font-weight: 100;
+  padding-bottom: 1rem;
+}
+
+.med-container {
+  text-align: center;
+  padding: 2rem 0px 1rem 0px;
+}
+
+/* Footer */
+
+footer {
+  padding: 2rem 0px;
+  width: 100%;
+}
+
+footer > span {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.footer-image {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  scale: 0.4;
+}
+
+.footer-image > img {
+  object-fit: contain;
+  height: auto;
+}
+
+/* Main */
+main {
+  display: grid;
+  grid-template-columns: auto 50%;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 1060px) {
+  /* Header */
+  .main-header {
+    padding-top: 0px;
+  }
+
+  /* BMI Buttons */
+
+  .buttons-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .bmi-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    gap: 0.5rem;
+    padding: 2rem 0px;
+  }
+
+  .med-container > .button {
+    width: 80%;
+    margin: 0.2rem auto;
+  }
+
+  .buttons-form > button {
+    width: 100%;
+  }
+
+  main {
+    display: block;
+  }
+
+  /* Footer */
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0px;
+  }
+
+  footer > span {
+    text-align: left;
+    margin: 0px auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-image {
+    flex-direction: column;
+    scale: 1;
+    height: auto;
+    justify-content: start;
+    align-items: start;
+    margin: 0 0;
+    width: 200px;
+    margin: 0px auto;
+  }
+
+  .footer-image > img {
+    margin: 0px auto;
+    width: 100%;
+  }
+}

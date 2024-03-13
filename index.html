@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator BMI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <h2>Calculator BMI - Darren Ezra Kambey</h2>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="section-container">
+            <header class="main-header">
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+                    penampilan,
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?</p>
+                <p>Yuk, hitung sekarang di <b>kalkulator BMI</b></p>
+            </header>
+            <section class="container-calculator">
+                <div class="container-form">
+                    <!-- Jenis Kelamin -->
+                    <div class="gender-container">
+                        <label for="gender">Jenis Kelamin</label>
+                        <div class="gender-form">
+                            <label for="gender">
+                                <input type="radio" name="gender" class="gender" checked>
+                                Pria
+                            </label>
+                            <label for="">
+                                <input type="radio" name="gender" class="gender">
+                                Wanita
+                            </label>
+                        </div>
+                    </div>
+                    <section class="section-container">
+                        <!-- Berat Badan (Kg) -->
+                        <div class="weight-container">
+                            <label for="weight">Berat Badan (kg) <span style="color:red;">*</span></label>
+                            <div class="error-div">
+                                <span class="error-message">use number format</span>
+                            </div>
+                            <div class="text-form">
+                                <img src="./assets/pencil_button.svg" alt="edit button" class="pencil-img" />
+                                <input type="text" name="weight" id="weight">
+                            </div>
+                        </div>
+                        <!-- Age -->
+                        <div class="age-container">
+                            <label for="age">Usia (tahun) <span style="color:red;">*</span></label>
+                            <div class="error-div">
+                                <span class="error-message">use number format</span>
+                            </div>
+                            <div class="text-form">
+                                <img src="./assets/pencil_button.svg" alt="edit button" class="pencil-img" />
+                                <input type="text" name="age" id="age">
+                            </div>
+                        </div>
+                        <!-- Height -->
+                        <div class="height-container">
+                            <label for="height">Tinggi badan (cm) <span style="color:red;">*</span></label>
+                            <div class="error-div">
+                                <span class="error-message">use number format</span>
+                            </div>
+                            <div class="text-form">
+                                <img src="./assets/pencil_button.svg" alt="edit button" class="pencil-img" />
+                                <input type="text" name="height" id="height">
+                            </div>
+                        </div>
+                        <div class="buttons-form">
+                            <button type="submit" id="calculate_button" onclick="calculateBMI()" disabled>Hitung
+                                BMI</button>
+                            <button type="submit" id="reset_button" onclick="resetAllBMI()">Reset</button>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- Feature Description -->
+            <section class="feature-desc-container">
+                <p class="title-feature">Keunggulan Fitur</p>
+                <ol style="padding-left: 1.2rem;">
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+                <p class="paragraph-desc">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau
+                    menyusui
+                    tidak boleh
+                    mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+                    selain
+                    berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                <p class="paragraph-desc">Kalkulator akan memberi anda gambaran tentang perbandingan berat badan Anda
+                    dengan
+                    nilai umum Indeks
+                    Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat
+                    tinggi
+                    badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>
+                </p>
+            </section>
+        </section>
+
+        <section class="section-container">
+
+            <!-- Results Section -->
+            <section class="result-container">
+                <p class="title-feature">Hasil</p>
+
+                <!-- BMI Result -->
+                <div class="bmi-result-container">
+                    <p id="bmi-category">Berat Badan Lebih</p>
+                    <p id="bmi-result">00.00</p>
+                    <p id="bmi-message-res">Anda memiliki berat badan berlebih</p>
+
+                    <button class="button">Download Hasil BMI</button>
+                </div>
+            </section>
+
+            <!-- BMI Description -->
+            <section class="bmi-desc-container">
+                <p id="bmi-result-2">Hasil BMI diantara 23 dan 25</p>
+
+                <p>Anda berada dalam kategori overweight atau berat badan berlebih.</p>
+                <p>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan
+                    berolahraga.</p>
+                <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga
+                    batas
+                    normal.</p>
+
+                <!-- Buttons -->
+                <div class="bmi-buttons">
+                    <button class="button">Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button class="button">Registrasi Online Ahli Gizi</button>
+                </div>
+
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
+                    seseorang.
+                    Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan
+                    Anda.</p>
+
+            </section>
+
+            <!-- Medical Desc -->
+            <section class="med-container">
+                <p>Beberapa penyakit yang berasal dari kegemukan</p>
+                <ul>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthritis</li>
+                </ul>
+                <button class="button">Konsultasi Dokter Via Aplikasi</button>
+                <button class="button">Registrasi Online Sekarang</button>
+
+            </section>
+
+
+            <!-- footer -->
+            <footer>
+                <span>Download Aplikasi</span>
+
+                <div class="footer-image">
+                    <img src="./assets/google_play.png" alt="google_play">
+                    <img src="./assets/app_store.png" alt="app_store">
+                </div>
+            </footer>
+        </section>
+    </main>
+
+
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>
